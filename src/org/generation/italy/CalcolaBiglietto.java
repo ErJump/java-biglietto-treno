@@ -10,11 +10,24 @@ public class CalcolaBiglietto {
 		System.out.print("Inserire numero di km: ");
 		int userKm = sc.nextInt();
 		if (userKm < 0) {
-			System.out.println("Il numero deve essere positivo");
+			System.out.println("Il numero di km deve essere positivo");
 			return;
 		}
 		
-		System.out.println(userKm);
+		System.out.print("Inserire l'età: ");
+		int userAge = sc.nextInt();
+		if (userAge < 0) {
+			System.out.println("l'età deve essere un numero positivo");
+			return;
+		}
+		
+		sc.close();
+		
+		double ticketPrice = ((double) userKm) * 0.21;
+		
+		System.out.println(ticketPrice);
+		
+		
 		
 	}
 }
