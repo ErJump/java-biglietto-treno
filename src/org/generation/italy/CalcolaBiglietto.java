@@ -23,7 +23,9 @@ public class CalcolaBiglietto {
 		
 		sc.close();
 		
-		double ticketPrice = ((double) userKm) * 0.21;
+		double userKmDouble = (double) userKm; 
+		
+		double ticketPrice = (userKmDouble * 0.21) + (0.01 * userKmDouble);
 		
 		if (userAge <= 12) {
 			ticketPrice = 0;
